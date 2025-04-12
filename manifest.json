@@ -1,1 +1,6 @@
-{}
+{
+  "name": "RocketSpam01",
+  "version": "1.0.0",
+  "description": "A custom Battlefield Portal experience.",
+  "main": "rules.txt"
+}
