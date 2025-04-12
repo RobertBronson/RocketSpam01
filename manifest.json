@@ -1,7 +1,1 @@
-{
-  "name": "Rocket Spam Mode",
-  "description": "Rocket launchers fire like automatic weapons. Infinite ammo. No reloads. Pure chaos.",
-  "version": "1.0.0",
-  "author": "MUSE",
-  "rules": "rules.txt"
-}
+{}
