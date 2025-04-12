@@ -1,0 +1,17 @@
+rule("Infinite Rockets")
+{
+    event
+    {
+        Ongoing - Each Player;
+        All;
+        All;
+    }
+
+    actions
+    {
+        SetAmmoCount(GetPlayerWeaponAmmo(PrimaryWeapon), 999);
+        SetAmmoCount(GetPlayerWeaponAmmo(SecondaryWeapon), 999);
+        SetPlayerWeaponAmmo(GetPlayer(), PrimaryWeapon, 999, 999);
+        SetPlayerWeaponAmmo(GetPlayer(), SecondaryWeapon, 999, 999);
+    }
+}
