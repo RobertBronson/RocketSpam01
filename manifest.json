@@ -1,6 +1,13 @@
 {
-  "name": "RocketSpam01",
-  "version": "1.0.0",
-  "description": "A custom Battlefield Portal experience.",
-  "main": "rules.txt"
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "EventDamageTypeCompare",
+        "id": "~MLzTw~YJ^Lt{B;jloQ2",
+        "x": 561,
+        "y": 143
+      }
+    ]
+  }
 }
