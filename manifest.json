@@ -7,6 +7,24 @@
         "id": "~MLzTw~YJ^Lt{B;jloQ2",
         "x": 561,
         "y": 143
+      },
+      {
+        "type": "SetPlayerKit",
+        "id": "v/J.B}Y%Uf)T`-B@DU-G",
+        "x": 649,
+        "y": 306
+      },
+      {
+        "type": "ArcsineInDegrees",
+        "id": "gcaQqXV1_v@Cl`]DD|uU",
+        "x": 272,
+        "y": 314
+      },
+      {
+        "type": "RemovePlayerInventory",
+        "id": "w8}_ejjn91pVWkEoPIG?",
+        "x": 640,
+        "y": 490
       }
     ]
   }
