@@ -5,8 +5,8 @@
       {
         "type": "modBlock",
         "id": "8|;)nS0hg^V@A:b6,WYK",
-        "x": 10,
-        "y": 10,
+        "x": -444,
+        "y": -179,
         "inputs": {
           "RULES": {
             "block": {
@@ -211,164 +211,69 @@
                         }
                       }
                     }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      {
-        "type": "ruleBlock",
-        "id": "8[*6JedjB_wWasLj)71~",
-        "x": -788,
-        "y": 944,
-        "extraState": {
-          "isOngoingEvent": true
-        },
-        "fields": {
-          "NAME": "TrackCrouches",
-          "EVENTTYPE": "Ongoing",
-          "OBJECTTYPE": "Player"
-        },
-        "inputs": {
-          "CONDITIONS": {
-            "block": {
-              "type": "conditionBlock",
-              "id": "Vm_zW?lV-(W(33RfFp;F",
-              "inputs": {
-                "CONDITION": {
-                  "block": {
-                    "type": "Equals",
-                    "id": "^dfwWwe-ijXRYDQ#6S(*",
-                    "inputs": {
-                      "VALUE-0": {
-                        "block": {
-                          "type": "GetSoldierState",
-                          "id": "Hi$N0EE)JNhve,OpyQ9y",
-                          "inputs": {
-                            "VALUE-0": {
-                              "block": {
-                                "type": "EventPlayer",
-                                "id": "Ka*|sYuHK,1v{3h~Ql;)"
-                              }
-                            },
-                            "VALUE-1": {
-                              "block": {
-                                "type": "SoldierStateBoolItem",
-                                "id": "[sXqE.mm6~=8+Qy4p;[o",
-                                "fields": {
-                                  "VALUE-0": "SoldierStateBool",
-                                  "VALUE-1": "IsCrouching"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "ruleBlock",
+                      "id": "44=qi{=8V.,7c/q31h7x",
+                      "extraState": {
+                        "isOngoingEvent": false
+                      },
+                      "fields": {
+                        "NAME": "StopScoring",
+                        "EVENTTYPE": "OnPlayerDied"
+                      },
+                      "inputs": {
+                        "ACTIONS": {
+                          "block": {
+                            "type": "DisplayCustomNotificationMessage",
+                            "id": "5hFRu3.Ko|AVX]N1*f(r",
+                            "inputs": {
+                              "VALUE-0": {
+                                "block": {
+                                  "type": "Message",
+                                  "id": "4PReoebM-6iu:}79Xm);",
+                                  "inputs": {
+                                    "VALUE-0": {
+                                      "block": {
+                                        "type": "Text",
+                                        "id": "J^pgO8V$nEI]6mrd2QL3",
+                                        "fields": {
+                                          "TEXT": "No Bags For You"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "VALUE-1": {
+                                "block": {
+                                  "type": "CustomMessagesItem",
+                                  "id": "i#x/b4@?HZ@+xt~RitSj",
+                                  "fields": {
+                                    "VALUE-0": "CustomMessages",
+                                    "VALUE-1": "HeaderText"
+                                  }
+                                }
+                              },
+                              "VALUE-2": {
+                                "block": {
+                                  "type": "Number",
+                                  "id": "5V{H,Ro!yP7hE?+a[W![",
+                                  "fields": {
+                                    "NUM": 2
+                                  }
+                                }
+                              },
+                              "VALUE-3": {
+                                "block": {
+                                  "type": "EventPlayer",
+                                  "id": "^nfL3XDna#:duTj]IuP5"
                                 }
                               }
                             }
                           }
                         }
-                      },
-                      "VALUE-1": {
-                        "block": {
-                          "type": "Boolean",
-                          "id": "(Rop[;,4j*ODli;-,}PM",
-                          "fields": {
-                            "BOOL": "TRUE"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "ACTIONS": {
-            "block": {
-              "type": "SetGamemodeScore",
-              "id": "~z)/0IO1i,sME?-fgUD}",
-              "inputs": {
-                "VALUE-0": {
-                  "block": {
-                    "type": "EventPlayer",
-                    "id": "D,,Q1aB+E~l(yDCRsHQ0"
-                  }
-                },
-                "VALUE-1": {
-                  "block": {
-                    "type": "Add",
-                    "id": "]s!9TN=((HGGPIU4L#X-",
-                    "inputs": {
-                      "VALUE-0": {
-                        "block": {
-                          "type": "GetGamemodeScore",
-                          "id": "I5gG((e/!++~mO5VL/_.",
-                          "inputs": {
-                            "VALUE-0": {
-                              "block": {
-                                "type": "EventPlayer",
-                                "id": "Wg`q@ra#/lVQHGOXX)u{"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "VALUE-1": {
-                        "block": {
-                          "type": "Number",
-                          "id": "a2kngE~[377.?^h`Xh2w",
-                          "fields": {
-                            "NUM": 1
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "next": {
-                "block": {
-                  "type": "DisplayCustomNotificationMessage",
-                  "id": "/|LGVQF14hYKd}4qfIN%",
-                  "inputs": {
-                    "VALUE-0": {
-                      "block": {
-                        "type": "Message",
-                        "id": "tfMrs1-V(j9ivCQhmqoW",
-                        "inputs": {
-                          "VALUE-0": {
-                            "block": {
-                              "type": "Text",
-                              "id": "m6hwbin$B%u{.0:K7N$a",
-                              "fields": {
-                                "TEXT": "Give 'em the bag!"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "VALUE-1": {
-                      "block": {
-                        "type": "CustomMessagesItem",
-                        "id": "SveQl{)~qu)=hG3meN]M",
-                        "fields": {
-                          "VALUE-0": "CustomMessages",
-                          "VALUE-1": "HeaderText"
-                        }
-                      }
-                    },
-                    "VALUE-2": {
-                      "block": {
-                        "type": "Number",
-                        "id": "($:|sh=SZkUWvQ[Z%rbI",
-                        "fields": {
-                          "NUM": 2
-                        }
-                      }
-                    },
-                    "VALUE-3": {
-                      "block": {
-                        "type": "EventPlayer",
-                        "id": "5`2x66Whz-G*PlPL.GEE"
                       }
                     }
                   }
