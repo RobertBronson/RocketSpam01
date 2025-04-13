@@ -63,7 +63,7 @@
                     "isOngoingEvent": true
                   },
                   "fields": {
-                    "NAME": "TrackCrouches",
+                    "NAME": "Score",
                     "EVENTTYPE": "Ongoing",
                     "OBJECTTYPE": "Player"
                   },
@@ -236,7 +236,7 @@
                       },
                       "fields": {
                         "NAME": "StopScoring",
-                        "EVENTTYPE": "OnPlayerDamaged"
+                        "EVENTTYPE": "OnMandown"
                       },
                       "inputs": {
                         "ACTIONS": {
