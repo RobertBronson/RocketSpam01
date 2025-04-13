@@ -60,20 +60,19 @@
                   "type": "ruleBlock",
                   "id": "j-aCg[$Gy[9qMjMMbpvG",
                   "extraState": {
-                    "isOngoingEvent": true
+                    "isOngoingEvent": false
                   },
                   "fields": {
                     "NAME": "Score",
-                    "EVENTTYPE": "Ongoing",
-                    "OBJECTTYPE": "Player"
+                    "EVENTTYPE": "OnPlayerEarnedKill"
                   },
                   "inputs": {
-                    "CONDITIONS": {
+                    "ACTIONS": {
                       "block": {
-                        "type": "conditionBlock",
-                        "id": "vB!I2VHX-Jov)l[[;m39",
+                        "type": "While",
+                        "id": "4nZPr],sn5CALOWLa9HH",
                         "inputs": {
-                          "CONDITION": {
+                          "VALUE-0": {
                             "block": {
                               "type": "Equals",
                               "id": "f~}sifKD4-0GK-@RDF`4",
@@ -114,88 +113,97 @@
                               }
                             }
                           }
-                        }
-                      }
-                    },
-                    "ACTIONS": {
-                      "block": {
-                        "type": "SetGamemodeScore",
-                        "id": "R39-xrQ@KVAg`d?eEVO;",
-                        "inputs": {
-                          "VALUE-0": {
-                            "block": {
-                              "type": "EventPlayer",
-                              "id": "Bk;7~aH_uSqdwhNzhT$Y"
-                            }
-                          },
-                          "VALUE-1": {
-                            "block": {
-                              "type": "Add",
-                              "id": "xKNoxFt1pEr0]ctrin7m",
-                              "inputs": {
-                                "VALUE-0": {
-                                  "block": {
-                                    "type": "GetGamemodeScore",
-                                    "id": "a6403c9i{8CJa{lC8#)x",
-                                    "inputs": {
-                                      "VALUE-0": {
-                                        "block": {
-                                          "type": "EventPlayer",
-                                          "id": ")7=$Qj*3eY`lqWpgh*+/"
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "VALUE-1": {
-                                  "block": {
-                                    "type": "Number",
-                                    "id": "LB6[:)kF2](y2*$*0Zzl",
-                                    "fields": {
-                                      "NUM": 1
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
                         },
                         "next": {
                           "block": {
-                            "type": "DisplayCustomNotificationMessage",
-                            "id": "?[,l_.RM5[GXsgaU1.5.",
+                            "type": "SetGamemodeScore",
+                            "id": "R39-xrQ@KVAg`d?eEVO;",
                             "inputs": {
                               "VALUE-0": {
                                 "block": {
-                                  "type": "Message",
-                                  "id": "^Pg|3X4Znj3:mGBKUk/_",
-                                  "inputs": {
-                                    "VALUE-0": {
-                                      "block": {
-                                        "type": "Text",
-                                        "id": "Ah:Xe}iTO)GPL/0pIO`v",
-                                        "fields": {
-                                          "TEXT": "Give 'em the bag!"
-                                        }
-                                      }
-                                    }
-                                  }
+                                  "type": "EventPlayer",
+                                  "id": "Bk;7~aH_uSqdwhNzhT$Y"
                                 }
                               },
                               "VALUE-1": {
                                 "block": {
-                                  "type": "CustomMessagesItem",
-                                  "id": "owuvgDqLD{_e,.ug`2y#",
-                                  "fields": {
-                                    "VALUE-0": "CustomMessages",
-                                    "VALUE-1": "HeaderText"
+                                  "type": "Add",
+                                  "id": "xKNoxFt1pEr0]ctrin7m",
+                                  "inputs": {
+                                    "VALUE-0": {
+                                      "block": {
+                                        "type": "GetGamemodeScore",
+                                        "id": "a6403c9i{8CJa{lC8#)x",
+                                        "inputs": {
+                                          "VALUE-0": {
+                                            "block": {
+                                              "type": "EventPlayer",
+                                              "id": ")7=$Qj*3eY`lqWpgh*+/"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "VALUE-1": {
+                                      "block": {
+                                        "type": "Number",
+                                        "id": "LB6[:)kF2](y2*$*0Zzl",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      }
+                                    }
                                   }
                                 }
-                              },
-                              "VALUE-3": {
-                                "block": {
-                                  "type": "EventPlayer",
-                                  "id": "Yu}5X(E;S:Ad]5RV_g3F"
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "DisplayCustomNotificationMessage",
+                                "id": "?[,l_.RM5[GXsgaU1.5.",
+                                "inputs": {
+                                  "VALUE-0": {
+                                    "block": {
+                                      "type": "Message",
+                                      "id": "^Pg|3X4Znj3:mGBKUk/_",
+                                      "inputs": {
+                                        "VALUE-0": {
+                                          "block": {
+                                            "type": "Text",
+                                            "id": "Ah:Xe}iTO)GPL/0pIO`v",
+                                            "fields": {
+                                              "TEXT": "Give 'em the bag!"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "VALUE-1": {
+                                    "block": {
+                                      "type": "CustomMessagesItem",
+                                      "id": "owuvgDqLD{_e,.ug`2y#",
+                                      "fields": {
+                                        "VALUE-0": "CustomMessages",
+                                        "VALUE-1": "MessageText1"
+                                      }
+                                    }
+                                  },
+                                  "VALUE-2": {
+                                    "block": {
+                                      "type": "Number",
+                                      "id": ",zb)6%AiT:uEw[fVSr!H",
+                                      "fields": {
+                                        "NUM": -1
+                                      }
+                                    }
+                                  },
+                                  "VALUE-3": {
+                                    "block": {
+                                      "type": "EventPlayer",
+                                      "id": "Yu}5X(E;S:Ad]5RV_g3F"
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -323,6 +331,12 @@
             }
           }
         }
+      },
+      {
+        "type": "conditionBlock",
+        "id": "vB!I2VHX-Jov)l[[;m39",
+        "x": 190,
+        "y": 130
       }
     ]
   }
