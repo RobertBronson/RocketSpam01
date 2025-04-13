@@ -5,8 +5,8 @@
       {
         "type": "modBlock",
         "id": "8|;)nS0hg^V@A:b6,WYK",
-        "x": -444,
-        "y": -179,
+        "x": -474,
+        "y": -195,
         "inputs": {
           "RULES": {
             "block": {
@@ -17,7 +17,7 @@
               },
               "fields": {
                 "NAME": "SetGameScore",
-                "EVENTTYPE": "OnGameModeStarted"
+                "EVENTTYPE": "OnPlayerDeployed"
               },
               "inputs": {
                 "ACTIONS": {
@@ -30,7 +30,7 @@
                           "type": "Boolean",
                           "id": "M=,C#h9@eVm/TF8RNb,N",
                           "fields": {
-                            "BOOL": "FALSE"
+                            "BOOL": "TRUE"
                           }
                         }
                       }
@@ -221,7 +221,7 @@
                       },
                       "fields": {
                         "NAME": "StopScoring",
-                        "EVENTTYPE": "OnPlayerDied"
+                        "EVENTTYPE": "OnPlayerDamaged"
                       },
                       "inputs": {
                         "ACTIONS": {
@@ -271,6 +271,23 @@
                                   "id": "^nfL3XDna#:duTj]IuP5"
                                 }
                               }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "EnableDefaultScoring",
+                                "id": "pK~}J_}s@m2Jkw0/V|A!",
+                                "inputs": {
+                                  "VALUE-0": {
+                                    "block": {
+                                      "type": "Boolean",
+                                      "id": "Bc;Pyu50@(C=Idf5knf:",
+                                      "fields": {
+                                        "BOOL": "TRUE"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -278,6 +295,38 @@
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ruleBlock",
+        "id": "aKg,DLh``$^5U]TarF94",
+        "x": 542,
+        "y": -142,
+        "extraState": {
+          "isOngoingEvent": true
+        },
+        "fields": {
+          "NAME": "New Rule",
+          "EVENTTYPE": "Ongoing",
+          "OBJECTTYPE": "Global"
+        }
+      },
+      {
+        "type": "TriggerAudio",
+        "id": "L=(e-8q#gFo=*x6l1L|2",
+        "x": 622,
+        "y": -443,
+        "inputs": {
+          "VALUE-0": {
+            "block": {
+              "type": "SoundsItem",
+              "id": "|(w_nr%%*Cto|lZ6IHyR",
+              "fields": {
+                "VALUE-0": "Sounds",
+                "VALUE-1": "ObjectiveFailed"
               }
             }
           }
