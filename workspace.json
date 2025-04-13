@@ -5,8 +5,8 @@
       {
         "type": "modBlock",
         "id": "8|;)nS0hg^V@A:b6,WYK",
-        "x": -474,
-        "y": -195,
+        "x": -2297,
+        "y": -1157,
         "inputs": {
           "RULES": {
             "block": {
@@ -286,29 +286,226 @@
       {
         "type": "ruleBlock",
         "id": "aKg,DLh``$^5U]TarF94",
-        "x": 542,
-        "y": -142,
+        "x": -925,
+        "y": 94,
         "extraState": {
           "isOngoingEvent": false
         },
         "fields": {
-          "NAME": "New Rule",
-          "EVENTTYPE": "OnPlayerDamaged"
-        }
-      },
-      {
-        "type": "TriggerAudio",
-        "id": "L=(e-8q#gFo=*x6l1L|2",
-        "x": 622,
-        "y": -443,
+          "NAME": "KillTimeWindow",
+          "EVENTTYPE": "OnPlayerEarnedKill"
+        },
         "inputs": {
-          "VALUE-0": {
+          "CONDITIONS": {
             "block": {
-              "type": "SoundsItem",
-              "id": "|(w_nr%%*Cto|lZ6IHyR",
-              "fields": {
-                "VALUE-0": "Sounds",
-                "VALUE-1": "ObjectiveFailed"
+              "type": "conditionBlock",
+              "id": "c||nMSW[bNFpMpW{}dk,",
+              "inputs": {
+                "CONDITION": {
+                  "block": {
+                    "type": "GetSoldierState",
+                    "id": "0eE83uFo@]]2JP-:#u4o",
+                    "inputs": {
+                      "VALUE-0": {
+                        "block": {
+                          "type": "EventPlayer",
+                          "id": "O-0AW?j]u)$iCC*FK3em"
+                        }
+                      },
+                      "VALUE-1": {
+                        "block": {
+                          "type": "SoldierStateBoolItem",
+                          "id": "erO(`{WkPPFD|jQ|.`nr",
+                          "fields": {
+                            "VALUE-0": "SoldierStateBool",
+                            "VALUE-1": "IsCrouching"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "conditionBlock",
+                  "id": ",N`3]R]9ag}l3[K^#x_y",
+                  "inputs": {
+                    "CONDITION": {
+                      "block": {
+                        "type": "And",
+                        "id": "8dVAe(*`ihRIs+;7aMSB",
+                        "inputs": {
+                          "VALUE-0": {
+                            "block": {
+                              "type": "GetSoldierState",
+                              "id": "BLvLB6gXe%GWSlhV?K+Y",
+                              "inputs": {
+                                "VALUE-0": {
+                                  "block": {
+                                    "type": "EventPlayer",
+                                    "id": "ySEs%36XCSkxuEpZmDGH"
+                                  }
+                                },
+                                "VALUE-1": {
+                                  "block": {
+                                    "type": "SoldierStateBoolItem",
+                                    "id": "=1z)22/*C=]owf#EQSGu",
+                                    "fields": {
+                                      "VALUE-0": "SoldierStateBool",
+                                      "VALUE-1": "IsCrouching"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "VALUE-1": {
+                            "block": {
+                              "type": "LessThanEqualTo",
+                              "id": "1(DRbHCl}Ev}n$h%Ty98",
+                              "inputs": {
+                                "VALUE-0": {
+                                  "block": {
+                                    "type": "Subtract",
+                                    "id": ")?0#}h4TFn3Rm0/Few1Y",
+                                    "inputs": {
+                                      "VALUE-0": {
+                                        "block": {
+                                          "type": "GetGameModeTimeElapsed",
+                                          "id": "N9Q7A/=B`G{DAK8Ki^-S"
+                                        }
+                                      },
+                                      "VALUE-1": {
+                                        "block": {
+                                          "type": "GetVariable",
+                                          "id": "M}on(+3|yGLv6Xs-7U!%",
+                                          "inputs": {
+                                            "VALUE-0": {
+                                              "block": {
+                                                "type": "variableReferenceBlock",
+                                                "id": "1+2*vudCkirENjiD%3_;",
+                                                "extraState": {
+                                                  "isObjectVar": true
+                                                },
+                                                "fields": {
+                                                  "OBJECTTYPE": "Player",
+                                                  "VAR": {
+                                                    "id": "h3T,B{_RnhxYeCq:cm+,"
+                                                  }
+                                                },
+                                                "inputs": {
+                                                  "OBJECT": {
+                                                    "block": {
+                                                      "type": "EventPlayer",
+                                                      "id": "GOW]3;jBk)5GVZQQw]I["
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "VALUE-1": {
+                                  "block": {
+                                    "type": "Number",
+                                    "id": "0Aw+qm*@{[JNx:^4u!5{",
+                                    "fields": {
+                                      "NUM": 2
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ACTIONS": {
+            "block": {
+              "type": "SetVariable",
+              "id": "^vH-lS}9-^)|lefYu2S~",
+              "inputs": {
+                "VALUE-0": {
+                  "block": {
+                    "type": "variableReferenceBlock",
+                    "id": "lf*U/*u/Sqf1/6_(c*nK",
+                    "extraState": {
+                      "isObjectVar": true
+                    },
+                    "fields": {
+                      "OBJECTTYPE": "Player",
+                      "VAR": {
+                        "id": "2:}r+a7Eb-:Rum6Mpo[M"
+                      }
+                    },
+                    "inputs": {
+                      "OBJECT": {
+                        "block": {
+                          "type": "EventPlayer",
+                          "id": "E1BU7st:td=t3:?iL}]b"
+                        }
+                      }
+                    }
+                  }
+                },
+                "VALUE-1": {
+                  "block": {
+                    "type": "Add",
+                    "id": "RK[nYySx3e3~(!9#66h7",
+                    "inputs": {
+                      "VALUE-0": {
+                        "block": {
+                          "type": "GetVariable",
+                          "id": "ee#!:xBp#+Cetz!n,F-1",
+                          "inputs": {
+                            "VALUE-0": {
+                              "block": {
+                                "type": "variableReferenceBlock",
+                                "id": "@NDexhQ79JwSB.EZd3^=",
+                                "extraState": {
+                                  "isObjectVar": true
+                                },
+                                "fields": {
+                                  "OBJECTTYPE": "Player",
+                                  "VAR": {
+                                    "id": "2:}r+a7Eb-:Rum6Mpo[M"
+                                  }
+                                },
+                                "inputs": {
+                                  "OBJECT": {
+                                    "block": {
+                                      "type": "EventPlayer",
+                                      "id": "NrnDCCfJ:l5m_sq2u;bz"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "VALUE-1": {
+                        "block": {
+                          "type": "Number",
+                          "id": "_2lB`zIG2-rztF#H?azC",
+                          "fields": {
+                            "NUM": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -330,13 +527,19 @@
             }
           }
         }
-      },
-      {
-        "type": "While",
-        "id": "4nZPr],sn5CALOWLa9HH",
-        "x": -674,
-        "y": 803
       }
     ]
-  }
+  },
+  "variables": [
+    {
+      "name": "KillTimeWindow",
+      "id": "h3T,B{_RnhxYeCq:cm+,",
+      "type": "Player"
+    },
+    {
+      "name": "CrouchScore",
+      "id": "2:}r+a7Eb-:Rum6Mpo[M",
+      "type": "Player"
+    }
+  ]
 }
