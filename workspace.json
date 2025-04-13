@@ -1,0 +1,383 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "modBlock",
+        "id": "8|;)nS0hg^V@A:b6,WYK",
+        "x": 10,
+        "y": 10,
+        "inputs": {
+          "RULES": {
+            "block": {
+              "type": "ruleBlock",
+              "id": "oPP:ePW]C+QQaWoN8N7$",
+              "extraState": {
+                "isOngoingEvent": false
+              },
+              "fields": {
+                "NAME": "SetGameScore",
+                "EVENTTYPE": "OnGameModeStarted"
+              },
+              "inputs": {
+                "ACTIONS": {
+                  "block": {
+                    "type": "EnableDefaultScoring",
+                    "id": "g6GbV(vQ0i!SMZH0gc.O",
+                    "inputs": {
+                      "VALUE-0": {
+                        "block": {
+                          "type": "Boolean",
+                          "id": "M=,C#h9@eVm/TF8RNb,N",
+                          "fields": {
+                            "BOOL": "FALSE"
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "SetTargetScore",
+                        "id": "/FLTAy({q?~|?88uhk_{",
+                        "inputs": {
+                          "VALUE-0": {
+                            "block": {
+                              "type": "Number",
+                              "id": "a_:yOam=AIuwxMwZ_D+F",
+                              "fields": {
+                                "NUM": 100
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "ruleBlock",
+                  "id": "j-aCg[$Gy[9qMjMMbpvG",
+                  "extraState": {
+                    "isOngoingEvent": false
+                  },
+                  "fields": {
+                    "NAME": "TrackCrouches",
+                    "EVENTTYPE": "OnPlayerEarnedKill"
+                  },
+                  "inputs": {
+                    "CONDITIONS": {
+                      "block": {
+                        "type": "conditionBlock",
+                        "id": "vB!I2VHX-Jov)l[[;m39",
+                        "inputs": {
+                          "CONDITION": {
+                            "block": {
+                              "type": "Equals",
+                              "id": "f~}sifKD4-0GK-@RDF`4",
+                              "inputs": {
+                                "VALUE-0": {
+                                  "block": {
+                                    "type": "GetSoldierState",
+                                    "id": "F}uEFbjlg~_K}QBq=fTT",
+                                    "inputs": {
+                                      "VALUE-0": {
+                                        "block": {
+                                          "type": "EventPlayer",
+                                          "id": "K:VEw3Elm4A!E5ed@fXq"
+                                        }
+                                      },
+                                      "VALUE-1": {
+                                        "block": {
+                                          "type": "SoldierStateBoolItem",
+                                          "id": "E|0QC-I_r=~%tGlaI3y2",
+                                          "fields": {
+                                            "VALUE-0": "SoldierStateBool",
+                                            "VALUE-1": "IsCrouching"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "VALUE-1": {
+                                  "block": {
+                                    "type": "Boolean",
+                                    "id": "$%0MB[:Ps/7Ev~lcp4r}",
+                                    "fields": {
+                                      "BOOL": "TRUE"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ACTIONS": {
+                      "block": {
+                        "type": "SetGamemodeScore",
+                        "id": "R39-xrQ@KVAg`d?eEVO;",
+                        "inputs": {
+                          "VALUE-0": {
+                            "block": {
+                              "type": "EventPlayer",
+                              "id": "Bk;7~aH_uSqdwhNzhT$Y"
+                            }
+                          },
+                          "VALUE-1": {
+                            "block": {
+                              "type": "Add",
+                              "id": "xKNoxFt1pEr0]ctrin7m",
+                              "inputs": {
+                                "VALUE-0": {
+                                  "block": {
+                                    "type": "GetGamemodeScore",
+                                    "id": "a6403c9i{8CJa{lC8#)x",
+                                    "inputs": {
+                                      "VALUE-0": {
+                                        "block": {
+                                          "type": "EventPlayer",
+                                          "id": ")7=$Qj*3eY`lqWpgh*+/"
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "VALUE-1": {
+                                  "block": {
+                                    "type": "Number",
+                                    "id": "LB6[:)kF2](y2*$*0Zzl",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "DisplayCustomNotificationMessage",
+                            "id": "?[,l_.RM5[GXsgaU1.5.",
+                            "inputs": {
+                              "VALUE-0": {
+                                "block": {
+                                  "type": "Message",
+                                  "id": "^Pg|3X4Znj3:mGBKUk/_",
+                                  "inputs": {
+                                    "VALUE-0": {
+                                      "block": {
+                                        "type": "Text",
+                                        "id": "Ah:Xe}iTO)GPL/0pIO`v",
+                                        "fields": {
+                                          "TEXT": "Give 'em the bag!"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "VALUE-1": {
+                                "block": {
+                                  "type": "CustomMessagesItem",
+                                  "id": "owuvgDqLD{_e,.ug`2y#",
+                                  "fields": {
+                                    "VALUE-0": "CustomMessages",
+                                    "VALUE-1": "HeaderText"
+                                  }
+                                }
+                              },
+                              "VALUE-2": {
+                                "block": {
+                                  "type": "Number",
+                                  "id": "2!~g!tWyxFj0ov}3XHUu",
+                                  "fields": {
+                                    "NUM": 2
+                                  }
+                                }
+                              },
+                              "VALUE-3": {
+                                "block": {
+                                  "type": "EventPlayer",
+                                  "id": "Yu}5X(E;S:Ad]5RV_g3F"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ruleBlock",
+        "id": "8[*6JedjB_wWasLj)71~",
+        "x": -788,
+        "y": 944,
+        "extraState": {
+          "isOngoingEvent": true
+        },
+        "fields": {
+          "NAME": "TrackCrouches",
+          "EVENTTYPE": "Ongoing",
+          "OBJECTTYPE": "Player"
+        },
+        "inputs": {
+          "CONDITIONS": {
+            "block": {
+              "type": "conditionBlock",
+              "id": "Vm_zW?lV-(W(33RfFp;F",
+              "inputs": {
+                "CONDITION": {
+                  "block": {
+                    "type": "Equals",
+                    "id": "^dfwWwe-ijXRYDQ#6S(*",
+                    "inputs": {
+                      "VALUE-0": {
+                        "block": {
+                          "type": "GetSoldierState",
+                          "id": "Hi$N0EE)JNhve,OpyQ9y",
+                          "inputs": {
+                            "VALUE-0": {
+                              "block": {
+                                "type": "EventPlayer",
+                                "id": "Ka*|sYuHK,1v{3h~Ql;)"
+                              }
+                            },
+                            "VALUE-1": {
+                              "block": {
+                                "type": "SoldierStateBoolItem",
+                                "id": "[sXqE.mm6~=8+Qy4p;[o",
+                                "fields": {
+                                  "VALUE-0": "SoldierStateBool",
+                                  "VALUE-1": "IsCrouching"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "VALUE-1": {
+                        "block": {
+                          "type": "Boolean",
+                          "id": "(Rop[;,4j*ODli;-,}PM",
+                          "fields": {
+                            "BOOL": "TRUE"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ACTIONS": {
+            "block": {
+              "type": "SetGamemodeScore",
+              "id": "~z)/0IO1i,sME?-fgUD}",
+              "inputs": {
+                "VALUE-0": {
+                  "block": {
+                    "type": "EventPlayer",
+                    "id": "D,,Q1aB+E~l(yDCRsHQ0"
+                  }
+                },
+                "VALUE-1": {
+                  "block": {
+                    "type": "Add",
+                    "id": "]s!9TN=((HGGPIU4L#X-",
+                    "inputs": {
+                      "VALUE-0": {
+                        "block": {
+                          "type": "GetGamemodeScore",
+                          "id": "I5gG((e/!++~mO5VL/_.",
+                          "inputs": {
+                            "VALUE-0": {
+                              "block": {
+                                "type": "EventPlayer",
+                                "id": "Wg`q@ra#/lVQHGOXX)u{"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "VALUE-1": {
+                        "block": {
+                          "type": "Number",
+                          "id": "a2kngE~[377.?^h`Xh2w",
+                          "fields": {
+                            "NUM": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "DisplayCustomNotificationMessage",
+                  "id": "/|LGVQF14hYKd}4qfIN%",
+                  "inputs": {
+                    "VALUE-0": {
+                      "block": {
+                        "type": "Message",
+                        "id": "tfMrs1-V(j9ivCQhmqoW",
+                        "inputs": {
+                          "VALUE-0": {
+                            "block": {
+                              "type": "Text",
+                              "id": "m6hwbin$B%u{.0:K7N$a",
+                              "fields": {
+                                "TEXT": "Give 'em the bag!"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "VALUE-1": {
+                      "block": {
+                        "type": "CustomMessagesItem",
+                        "id": "SveQl{)~qu)=hG3meN]M",
+                        "fields": {
+                          "VALUE-0": "CustomMessages",
+                          "VALUE-1": "HeaderText"
+                        }
+                      }
+                    },
+                    "VALUE-2": {
+                      "block": {
+                        "type": "Number",
+                        "id": "($:|sh=SZkUWvQ[Z%rbI",
+                        "fields": {
+                          "NUM": 2
+                        }
+                      }
+                    },
+                    "VALUE-3": {
+                      "block": {
+                        "type": "EventPlayer",
+                        "id": "5`2x66Whz-G*PlPL.GEE"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
